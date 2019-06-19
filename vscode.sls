@@ -9,9 +9,9 @@ vscode:
   '{{version}}':
     full_name: 'Microsoft Visual Studio Code'
     {% if grains['cpuarch'] == 'AMD64' %}
-    installer: 'salt://win/repo-ng/vscode/VSCodeSetup-x64-{{ version }}.exe'
+    installer: 'salt://srv/salt/win/repo-ng/vscode/VSCodeSetup-x64-{{ version }}.exe'
     {% else %}
-    installer: 'salt://win/repo-ng/vscode/VSCodeSetup-ia32-{{ version }}.exe' 
+    installer: 'salt://srv/salt/win/repo-ng/vscode/VSCodeSetup-ia32-{{ version }}.exe' 
     {% endif %}
     uninstaller: 'C:\{{ PROGRAM_FILES }}\Microsoft VS Code\unins000.exe'
     install_flags: '/SP- /VERYSILENT /NORESTART /MERGETASKS=!RUNCODE'
